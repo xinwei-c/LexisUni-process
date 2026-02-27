@@ -3,7 +3,7 @@ import os
 import shutil
 
 #in this case, we want to make all the files to this dir
-target_dir = "gaza_protest" # change the target dir here
+target_dir = "DIR" # change the target dir here
 if not os.path.exists(target_dir):
     os.makedirs(target_dir) ## find the target folder, if not created, it will create a new dir
 

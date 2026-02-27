@@ -24,5 +24,5 @@ Ensure all your LexisNexis .zip files are in the same directory.
 ### 3. Output
 The script will create a new folder. All primary documents will be moved there, and any internal sub-folders or _doclist files will be removed or ignored.
 
-### 4. Check Numer
+### 4. Check Number
 RUN Command `ls DIR(change name here) | wc -l` to see the final number of your files 

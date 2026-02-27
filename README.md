@@ -13,12 +13,6 @@ This tool automates three tedious tasks:
 ### 1. Setup Your Folder
 Ensure all your LexisNexis .zip files are in the same directory.
 - Place the `unzip.py` script into this folder.
-- The folder structure should look like this:
-/your-project-folder
-├── 1.zip
-├── 2.zip
-├── ...
-└── unzip.py
 
 ### 2. Run the Script
 - Open your Terminal (or Command Prompt).

@@ -59,21 +59,17 @@ def is_junk_line(line):
     # lines that are only bullets and punctuation
     if re.fullmatch(r"[\.\-\•\·\*\■\▪\▫\◦\s]+", s):
         return True
-
     # page markers
     if re.fullmatch(r"page \d+ of \d+", lower):
         return True
-
     #html residue
     if "skip-to-content" in lower:
         return True
     if 'content"class=' in lower:
         return True
-    
     # headline index entries like a date with a title 
     if re.match(
-    r'^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}',
-    s):
+    r'^(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}', s): #there some error when parsing the bullet points, so I write these to manually remove the texts that are noise.
         if len(s.split()) <= 15:
             return True
 
@@ -131,9 +127,9 @@ def clean_body(body_original, title="", date=""):
             break
 
     cleaned = cleaned[start:]
-
     return "\n".join(cleaned).strip()
 
+#cleaned place
 def process_pdf(path):
     text = extract_text(path)
     lines = [l.strip() for l in text.split("\n") if l.strip()]
